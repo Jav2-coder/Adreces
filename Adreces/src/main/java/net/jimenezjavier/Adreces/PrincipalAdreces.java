@@ -107,7 +107,7 @@ public final class PrincipalAdreces {
      * Inicialitza el contingut del frame.
      */
     private void initialize() {
-        File fitxer = new File("src/main/resources/adreces.txt");
+        File fitxer = new File("adreces.txt");
         totalDades = new ArrayList<Adreca>();
         if (fitxer.exists()) {
             try {
@@ -128,8 +128,7 @@ public final class PrincipalAdreces {
             }
         } else {
             try {
-                fichero = new FileWriter("src/main/resources/adreces.txt",
-                        true);
+                fichero = new FileWriter("adreces.txt",true);
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
@@ -195,8 +194,7 @@ public final class PrincipalAdreces {
                 lblSecret.setText("");
                 FileWriter fitxerTemp = null;
                 try {
-                    fitxerTemp = new FileWriter(
-                            "src/main/resources/adreces.txt", true);
+                    fitxerTemp = new FileWriter("adreces.txt", true);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
